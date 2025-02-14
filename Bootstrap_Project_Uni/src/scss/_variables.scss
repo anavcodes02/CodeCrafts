@@ -1,0 +1,25 @@
+// Override Bootstrap default variables here
+// See node_modules/bootstrap/scss/_variables.scss for available variables
+
+// Custom color scheme
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// Custom spacers
+$spacer: 1rem;
+
+// Custom breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
