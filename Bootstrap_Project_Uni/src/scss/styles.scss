@@ -1,0 +1,12 @@
+// Custom variables
+@import "variables";
+
+// Import Bootstrap from node_modules
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Custom components
+@import "components/buttons";
+@import "components/navbar";
+
+// Custom styles
+@import "custom";
