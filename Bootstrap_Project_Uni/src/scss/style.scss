@@ -59,3 +59,22 @@ footer {
     position: relative;
     bottom: 0;
 }
+
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+#backToTopBtn:hover {
+    background-color: #555;
+}
