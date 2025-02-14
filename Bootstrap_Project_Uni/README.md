@@ -7,6 +7,7 @@ Este é um projeto moderno de desenvolvimento web utilizando Bootstrap 5, com um
 ### Pré-requisitos
 - Node.js (versão 14 ou superior)
 - npm (vem com o Node.js)
+- Um copo de vinho ou cerveja (se for Sagres, start over)
 
 ### Instalação
 
@@ -253,7 +254,8 @@ app.listen(port, () => {
 ### "Os testes falham no commit"
 - Verifica se o Husky está configurado corretamente
 - Certifica-te que todos os testes estão passando antes de fazer commit
+- Se a cagada é grave, certifica-te de ter um colega a quem culpar
 
 ## 📝 Licença
 
-Este projeto está licenciado sob a Licença ISC.
+Este projeto está licenciado sob a Licença Carlão o Cara (CC4).
