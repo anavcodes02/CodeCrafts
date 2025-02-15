@@ -17,6 +17,7 @@ const jsConfig = {
     '.svg': 'file',
     '.jpg': 'file',
     '.gif': 'file',
+    '.scss': 'css'
   },
   assetNames: 'assets/[name]-[hash]',
   metafile: true,
