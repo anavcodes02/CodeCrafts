@@ -256,6 +256,129 @@ app.listen(port, () => {
 - Certifica-te que todos os testes estão passando antes de fazer commit
 - Se a cagada é grave, certifica-te de ter um colega a quem culpar
 
+## 🎨 CSS, SASS e Estilos
+
+### Como Personalizar o Bootstrap com SCSS
+
+O nosso projeto utiliza SASS (SCSS) para personalizar o Bootstrap de forma eficiente e organizada. Aqui está um guia detalhado sobre como fazer isso:
+
+#### 1. Estrutura dos Ficheiros SCSS
+```scss
+src/scss/
+├── custom/              # As tuas personalizações
+│   ├── _variables.scss  # Substitui variáveis do Bootstrap
+│   └── _custom.scss     # Estilos personalizados
+└── main.scss           # Ficheiro principal que importa tudo
+```
+
+#### 2. Substituir Variáveis do Bootstrap
+
+Para modificar as predefinições do Bootstrap:
+
+1. Cria ou edita `src/scss/custom/_variables.scss`:
+```scss
+// Cores principais
+$primary: #teu-codigo-cor;
+$secondary: #teu-codigo-cor;
+
+// Tipografia
+$font-family-base: "Tua Fonte", sans-serif;
+$font-size-base: 1rem;
+
+// Arredondamento dos cantos
+$border-radius: 0.5rem;
+
+// Espaçamento
+$spacer: 1rem;
+```
+
+2. Importa as variáveis ANTES do Bootstrap em `main.scss`:
+```scss
+@import "custom/variables";
+@import "bootstrap/scss/bootstrap";
+```
+
+#### 3. Adicionar Estilos Personalizados
+
+Em `src/scss/custom/_custom.scss`:
+```scss
+// Sobrescreve classes do Bootstrap
+.btn-primary {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+// Adiciona novas classes
+.texto-destaque {
+    font-weight: bold;
+    color: $primary;
+}
+```
+
+#### 4. Como Utilizar
+
+1. **Compilação Automática**:
+   - Durante desenvolvimento: `npm run dev`
+   - Para produção: `npm run build`
+
+2. **Ordem de Importação** (em `main.scss`):
+```scss
+// 1. Variáveis personalizadas
+@import "custom/variables";
+
+// 2. Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// 3. Componentes personalizados
+@import "custom/custom";
+```
+
+#### 5. Dicas Importantes
+
+- **Evita Sobrescrever Diretamente**: Usa variáveis sempre que possível
+- **Organização**: Mantém ficheiros separados por funcionalidade
+- **Documentação**: Comenta alterações importantes
+- **Mobile First**: Começa pelo mobile e depois adapta para desktop
+- **Utiliza Mixins**: Aproveita os mixins do Bootstrap para responsividade:
+```scss
+@include media-breakpoint-up(md) {
+    // Estilos para tablets e superiores
+}
+```
+
+#### 6. Exemplos Práticos
+
+**Personalizar Botões**:
+```scss
+// Em _variables.scss
+$btn-padding-y: 1rem;
+$btn-padding-x: 2rem;
+$btn-border-radius: 2rem;
+
+// Em _custom.scss
+.btn {
+    &-primary {
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    }
+}
+```
+
+**Sistema de Cores**:
+```scss
+// Em _variables.scss
+$theme-colors: (
+    "primary": #tua-cor,
+    "secondary": #tua-cor,
+    "success": #tua-cor,
+    "custom-cor": #tua-cor
+);
+```
+
+Lembra-te: Após qualquer alteração nos ficheiros SCSS, o sistema de build recompilará automaticamente os estilos. Verifica a consola para possíveis erros de compilação.
+
 ## 📝 Licença
 
 Este projeto está licenciado sob a Licença Carlão o Cara (CC4).
